@@ -1,0 +1,41 @@
+//TODO
+
+What do i want to show
+1. NAME duh
+2. something about me (and my history ehhh blushh hehe)
+3. Projects and Certification
+4. Contacting me
+5. ALL RIGHTS RESERVED TO MEEEEEE!!!!
+6. FUN: List of my fav Things 
+    1. songs
+    2. games
+    3. Shows (TV, MOVIE, ANIME)
+    4. Tech
+    5. Podcasts
+    6. Video games
+    (Recommendation section in here)
+7: FUN; someting to add later
+
+0: References
+    May the force be with you, but for me, its 23, hehe
+    
+
+First start with a layout
+What I want 
+    A Simple one page for 1,2,3,4
+    another page for FUN
+layout  
+    Header with Name, About, Project, Contact, Extra(FUN)
+    Name (JAYYYYY)
+    Some one liner
+    Projects (I ahve 3 to show and write someting about it)
+    Contact (neeed some improvements)
+    AYOO all rights resetves
+Design
+    Font: Merriweather, Playfair Display, Monsterrate, Monospace,  Arial, Helvetica (Fuck Everything, Monospace is the king💪🏻)
+    Color Family: Probably Black and White for now
+    Photo: Ehh! placeholder (hehe🤣)
+What to write
+    loremmm ipsum HAHA!!!🤣
+
+
