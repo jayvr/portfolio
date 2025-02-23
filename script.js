@@ -26,9 +26,10 @@ document.addEventListener("click", function (e) {
     !contactSection.contains(e.target) &&
     !e.target.closest('a[href="#Contact"]')
   ) {
+    contactSection.classList.remove("active");
     setTimeout(() => {
       contactSection.style.display = "none";
       contactSection.style.zIndex = "-1";
-    }, 300);
+    }, 1000);
   }
 });

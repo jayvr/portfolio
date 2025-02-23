@@ -1,3 +1,11 @@
+/* Define color palette */
+:root {
+  --red: #e63946;
+  --off-white: #f1faee;
+  --light-blue: #a8dadc;
+  --medium-blue: #457b9d;
+  --dark-blue: #1d3557;
+}
 /* CSS Reset and default style*/
 * {
   margin: 0;
@@ -39,14 +47,15 @@ img {
 #MyPhoto {
   border-radius: 50%;
   border-color: black;
-  border-width: 5px;
+  border-width: 10px;
   border-style: solid;
-  height: 10rem;
-  width: 10rem;
+  height: 250px;
+  width: 250px;
 }
 
 #MyPhoto:hover {
-  border-color: #b590ff;
+  border-color: var(--light-blue);
+  transition: ease-in-out 0.5s;
 }
 
 body {
@@ -84,8 +93,17 @@ header {
   padding: 1rem 2rem;
 }
 
+#Tagline > h3 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+
 #MyName {
-  color: #5f22d9;
+  font-size: 3rem;
+}
+#MyName:hover {
+  color: var(--medium-blue);
+  transition: ease-in-out 0.5s;
 }
 
 #Projects {
@@ -112,10 +130,11 @@ header {
 
 .project {
   width: 375px;
+  min-height: 150px;
   padding: 0.5rem;
   border-radius: 8px;
   /* background-color: #b590ff; */
-  border-color: #000;
+  border-color: var(--dark-blue);
   border-width: 2px;
   border-style: solid;
 }
@@ -123,6 +142,10 @@ header {
 .project > h3 {
   text-align: center;
   padding: 0.5rem;
+  height: 4rem;
+  background-color: var(--off-white);
+  border-radius: 8px;
+  align-self: center;
 }
 
 .project > p {
@@ -140,10 +163,59 @@ header {
 }
 
 .project:hover {
-  border-color: #b590ff;
+  border-color: var(--medium-blue);
   transform: translateY(-10px);
   transition-timing-function: ease-in-out;
   transition: 0.2s;
+}
+/* New Section: Something About Me */
+#AboutMe {
+  padding: 2rem;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+#AboutMe .secHead {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: var(--dark-blue);
+}
+
+/* New Section: Achievements and Certificates */
+#Achievements {
+  padding: 2rem;
+  background-color: var(--off-white);
+  color: var(--dark-blue);
+}
+
+#Achievements .secHead {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#Achievements ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+#Achievements li {
+  margin-bottom: 0.5rem;
 }
 
 /* ----------------CONTACT---------------------------------------------- */
@@ -154,15 +226,18 @@ header {
   bottom: 5px;
   left: 25%;
   width: 50%;
-  background-color: cornsilk;
+  background-color: var(--off-white);
   z-index: -1;
-  transition: bottom 0.5s ease, z-index 0.5s ease;
+  transition: bottom 1s ease, z-index 1s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
 
 #Contact.active {
   bottom: 0;
   z-index: 1;
-  transition: bottom 0.5s ease, z-index 0.5s ease;
+  opacity: 1;
+  /* transition: bottom 0.5s ease, z-index 0.5s ease; */
 }
 
 /* Contact form styles */
@@ -295,7 +370,7 @@ footer {
     align-items: center;
   }
 
-  .project {
-    width: 100%;
-  }
+  /* .project {
+    width: 80%;
+  } */
 }
