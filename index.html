@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/c611235ef7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Jay Vanraj</title>
   </head>
@@ -14,7 +21,7 @@
         <ul id="Navbar">
           <!-- <li><a href="#about">About</a></li> -->
           <li><a href="#Projects">Projects</a></li>
-          <li><a onclick="showContact()" href="#Contact">Contact</a></li>
+          <li><a href="#Contact">Contact</a></li>
           <li><a href="#">Extras</a></li>
         </ul>
       </nav>
@@ -24,29 +31,28 @@
       <h3>
         Hello Hello! I'm <bold id="MyName">Jay Vanraj</bold>. A passionate
         cybersecurty graduate.
-    
+      </h3>
+
       <h3>I welcome you to my website.</h3>
     </section>
     <section id="Projects">
       <h2 class="secHead">Projects</h2>
       <div id="ProjectsContainer">
-        <div class="project">
-          <h3>Network Security Monitoring
+        <div class="projectCard">
+          <h3>
             <a
-            href="https://www.youtube.com/watch?v=LtUQvg4HDHo"
-            target="_blank"
-            >[YOUTUBE]</a
-          >
+              href="https://www.youtube.com/watch?v=LtUQvg4HDHo"
+              target="_blank"
+              >Network Security Monitoring [YOUTUBE]</a
+            >
           </h3>
-        
           <p>
             Configured Security Onion to analyze and mitigate harmful events,
             utilizing various tools to extract pertinent information for
             comprehensive threat analysis and resolution.
-           
           </p>
         </div>
-        <div class="project">
+        <div class="projectCard">
           <h3>Windows Server Failover</h3>
           <p>
             Implemented failover for OS clusters using iSCSI disks, ensuring
@@ -54,8 +60,8 @@
             transition between clustered operating systems..
           </p>
         </div>
-        <div class="project">
-          <h3>Merging of Enterprise Networks  </h3>
+        <div class="projectCard">
+          <h3>Merging of Enterprise Networks</h3>
           <p>
             Implemented VPN technologies, Cloud integration and Software Defined
             Networking (SDN-Technology) to establish a comprehensive
@@ -64,45 +70,71 @@
             efficient data delivery throughout the expansive network.
           </p>
         </div>
-        <div class="project">
-          <h3>EduTeur
+        <div class="projectCard">
+          <h3>
             <a href="https://github.com/jayvr/eduteur" target="_blank"
-            >[GITHUB]</a
-          >
+              >EduTeur [GITHUB]</a
+            >
           </h3>
-        
           <p>
             An Online Teaching Platform based on university guidelines and
             Standard. Developed an online teaching platform meeting university
             standard with a security-first approach.
-            
           </p>
         </div>
       </div>
     </section>
     <section id="Achievements">
-      <h2 class="secHead">Achievements and Certificates</h2>
-      <ul>
-        <li>(ISC)² Certified in Cybersecurity</li>
-        <li>CompTIA Security+ Certification</li>
-        <li>Google IT Support Professional Certificate</li>
-      </ul>
-    </section>
+      <h2 class="secHead">Certificates</h2>
+      <div class="certificatesContainer">
+        <div class="certificateCard">
+          <h3>CompTIA Security+ Certification</h3>
+          <p><strong>ID:</strong> BEP7X5T55NF1QNC7</p>
+          <p><strong>Obtained Date:</strong> November 13, 2024</p>
+          <p><strong>Expiry Date:</strong> November 13, 2027</p>
+        </div>
+        <div class="certificateCard">
+          <h3>(ISC)² Certified in Cybersecurity</h3>
+          <p><strong>ID:</strong> 1898797</p>
+          <p><strong>Obtained Date:</strong> Feburary 01, 2024</p>
+          <p><strong>Expiry Date:</strong> January 31, 2027</p>
+        </div>
+        <div class="certificateCard">
+          <h3>Google IT Support Professional Certificate</h3>
+          <p><strong>ID:</strong> 5QA5R56W2JC8</p>
+          <p><strong>Obtained Date:</strong> July 03, 2020</p>
+          <p><strong>Expiry Date:</strong> NONE</p>
+        </div>
+      </div>
     <section id="AboutMe">
       <h2 class="secHead">About Me</h2>
-      <p>
-        I'm a cybersecurity enthusiast with a strong foundation in IT and a passion for protecting digital landscapes. My academic background in Information and Communication Technology, coupled with specialized certifications like CompTIA Security+ and (ISC)² Certified in Cybersecurity, has equipped me with a comprehensive understanding of security principles and practices.
-        My experience spans various domains, including network security, incident response, and threat analysis. I'm proficient in programming languages like Python, Java, and C++, and I leverage these skills to develop robust security solutions. I'm also well-versed in industry-standard frameworks like MITRE ATT&CK and NIST CSF, and I'm always eager to learn and adapt to the ever-evolving cybersecurity landscape.
-        I'm a firm believer in the power of collaboration and communication, and I strive to foster a positive and supportive environment in any team I'm a part of. I'm also passionate about mentoring and sharing my knowledge with others.
-      </p>
-      <a href="src/Resume.pdf" target="_blank" class="resume-button">View My Resume</a>
+      <div class="meCard">
+        I'm a cybersecurity enthusiast with a strong foundation in IT and a
+        passion for protecting digital landscapes. My academic background in
+        Information and Communication Technology, coupled with specialized
+        certifications like CompTIA Security+ and (ISC)² Certified in
+        Cybersecurity, has equipped me with a comprehensive understanding of
+        security principles and practices. My experience spans various domains,
+        including network security, incident response, and threat analysis. I'm
+        proficient in programming languages like Python, Java, and C++, and I
+        leverage these skills to develop robust security solutions. I'm also
+        well-versed in industry-standard frameworks like MITRE ATT&CK and NIST
+        CSF, and I'm always eager to learn and adapt to the ever-evolving
+        cybersecurity landscape. I'm a firm believer in the power of
+        collaboration and communication, and I strive to foster a positive and
+        supportive environment in any team I'm a part of. I'm also passionate
+        about mentoring and sharing my knowledge with others.
+        
+        <a href="src/Resume.pdf" target="_blank" class="resume-button"
+        >View My Resume</a>
+      </div>  
     </section>
     <section id="Contact">
       <h2 class="secHead">Contact</h2>
       <div id="ContactContainer">
         <form
           id="contactForm"
-          action="https://formspree.io/f/{your_form_id}"
+          action="#"
           method="POST"
         >
           <div class="form-group">
@@ -128,18 +160,12 @@
     <footer>
       <div id="Socials">
         <a href="https://github.com/jayvr" target="_blank"
-          ><img src="src/github.png" alt="Github"
-        /></a>
+          ><i class="fa-brands fa-github fa-lg" style="color: #B197FC;"></i></i></a>
         <a href="https://www.linkedin.com/in/jay-vanraj" target="_blank"
-          ><img src="src/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="mailto:jayvanraj2000@gmail.com" target="_blank"
-          ><img src="src/gmail.png" alt="jayvanraj2000@gmail.com"
-        /></a>
-        <a href="tel:+12269776794 " target="_blank"> +1 (226) 977-6794</a>
+          ><i class="fa-brands fa-linkedin fa-lg" style="color: #74C0FC;"></i></i></a>
       </div>
       <div id="Copy">
-        &copy; 2025 jayvr. May the force be with you as for me its 23, hehe😁
+        &copy; 2025 jayvr. May the force be with you!, hehe😁
       </div>
     </footer>
     <script src="script.js"></script>

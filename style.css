@@ -1,10 +1,17 @@
 /* Define color palette */
 :root {
-  --red: #e63946;
-  --off-white: #f1faee;
-  --light-blue: #a8dadc;
-  --medium-blue: #457b9d;
-  --dark-blue: #1d3557;
+  --primary-color: #ff6f61; /* Orange/Red */
+  --secondary-color: #2c3e50; /* Dark Blue */
+  --accent-color: #8e44ad; /* Playful Purple */
+  --background-color: #ecf0f1; /* Light Gray */
+  --highlight-color: #34495e; /* Dark Gray */
+
+  /* Font sizes */
+  --font-size-base: 18px;
+  --font-size-small: 16px;
+  --font-size-large: 20px;
+  --font-size-xlarge: 24px;
+  --font-size-xxlarge: 32px;
 }
 /* CSS Reset and default style*/
 * {
@@ -12,7 +19,7 @@
   padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
-  font-family: monospace, Arial, Helvetica, sans-serif;
+  font-family: inter, Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
 /* Smooth scrolling */
@@ -54,7 +61,7 @@ img {
 }
 
 #MyPhoto:hover {
-  border-color: var(--light-blue);
+  border-color: var(--accent-color);
   transition: ease-in-out 0.5s;
 }
 
@@ -72,7 +79,8 @@ header {
 }
 
 #Banner {
-  font-size: 23px;
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
 }
 #Navbar {
   display: flex;
@@ -94,18 +102,19 @@ header {
 }
 
 #Tagline > h3 {
-  font-size: 2rem;
-  color: var(--dark-blue);
+  font-size: var(--font-size-large);
+  color: var(--secondary-color);
 }
 
 #MyName {
-  font-size: 2rem;
+  font-size: var(--font-size-large);
 }
 #MyName:hover {
-  color: var(--medium-blue);
+  color: var(--primary-color);
   transition: ease-in-out 0.5s;
 }
 
+/* --------------------------- PROJECTS----------------------------- */
 #Projects {
   display: flex;
   flex-direction: column;
@@ -116,8 +125,8 @@ header {
 
 .secHead {
   text-align: center;
-  font-style: bold;
-  font-size: 2rem;
+  /* font-style: bold; */
+  font-size: var(--font-size-xlarge);
 }
 
 #ProjectsContainer {
@@ -128,124 +137,153 @@ header {
   gap: 1rem;
 }
 
-.project {
+.projectCard {
   width: 375px;
   min-height: 150px;
   padding: 0.5rem;
   border-radius: 8px;
-  /* background-color: #b590ff; */
-  border-color: var(--dark-blue);
-  border-width: 2px;
-  border-style: solid;
+  background-color: var(--background-color);
+  border: 1px solid var(--highlight-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project > h3 {
+.projectCard > h3 {
   text-align: center;
   padding: 0.5rem;
   height: 4rem;
-  background-color: var(--off-white);
+  color: var(--accent-color);
+  background-color: var(--background-color);
   border-radius: 8px;
   align-self: center;
+  font-size: var(--font-size-large);
+  
 }
 
-.project > p {
+.projectCard > p {
   text-align: center;
   padding: 0.5rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   height: 2.5rem;
+  transition: transform 0.3s ease;
+  font-size: var(--font-size-base);
+  
 }
-.project > p:hover {
+
+.projectCard:hover > p {
   overflow: visible;
   white-space: normal;
   height: auto;
-}
-
-.project:hover {
-  border-color: var(--medium-blue);
   transform: translateY(-10px);
-  transition-timing-function: ease-in-out;
-  transition: 0.2s;
-}
-/* New Section: Something About Me */
-#AboutMe {
-  padding: 2rem;
-  background-color: var(--light-blue);
-  color: var(--dark-blue);
-}
+  transition: transform 0.3s ease;
+} 
 
-#AboutMe .secHead {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.projectCard:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+  /* transition-timing-function: ease-in-out;
+  transition: 0.2s; */
 }
-
-.resume-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--red);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.resume-button:hover {
-  background-color: var(--dark-blue);
-}
-
-/* New Section: Achievements and Certificates */
+* ------------------ACHIEVEMENTS------------------------------ */
 #Achievements {
   padding: 2rem;
-  background-color: var(--off-white);
-  color: var(--dark-blue);
+  /* background-color: var(--off-white); */
+  color: var(--secondary-color);
 }
 
 #Achievements .secHead {
   text-align: center;
-  font-size: 2rem;
+  font-size: var(--font-size-xlarge);
+  margin-bottom: 1rem;
+}
+.certificatesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.certificateCard {
+  background-color: var(--background-color);
+  border: 1px solid var(--highlight-color);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificateCard:hover {
+  transform: translateY(-10px);
+}
+
+.certificateCard h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+  font-size: var(--font-size-large);
+}
+
+.certificateCard p {
+  margin: 0.25rem 0;
+  color: var(--secondary-color);
+  font-size: var(--font-size-base);
+}
+/* ----------------------ABOUT ME---------------------------- */
+#AboutMe {
+  padding: 2rem 0rem;
+  color: var(--secondary-color);
+}
+
+#AboutMe .secHead {
+  text-align: center;
+  font-size: var(--font-size-xlarge);
   margin-bottom: 1rem;
 }
 
-#Achievements ul {
-  list-style-type: disc;
-  padding-left: 2rem;
+.meCard {
+  background-color: var(--background-color);
+  border: 1px solid var(--highlight-color);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 99%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: auto;
 }
 
-#Achievements li {
-  margin-bottom: 0.5rem;
+.resume-button {
+  display: block;
+  margin-top: 1rem;
+  margin: auto;
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size-base);
+}
+
+.resume-button:hover {
+  background-color: var(--accent-color);
 }
 
 /* ----------------CONTACT---------------------------------------------- */
-#Contact {
-  display: none;
-  position: fixed;
-  border-radius: 10px;
-  bottom: 5px;
-  left: 25%;
-  width: 50%;
-  background-color: var(--off-white);
-  z-index: -1;
-  transition: bottom 1s ease, z-index 1s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-}
-
-#Contact.active {
-  bottom: 0;
-  z-index: 1;
-  opacity: 1;
-  /* transition: bottom 0.5s ease, z-index 0.5s ease; */
-}
-
-/* Contact form styles */
 #ContactContainer {
   display: flex;
+  width: 99%;
+  margin: auto;
+  margin-bottom: 1rem;
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  border: 1px solid var(--highlight-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contactForm {
@@ -264,29 +302,33 @@ header {
 .form-group label {
   margin-bottom: 0.5rem;
   font-weight: bold;
+  font-size: var(--font-size-base);
+  color: var(--secondary-color);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--highlight-color);
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
+  background-color: var(--off-white);
+  color: var(--secondary-color);
 }
 
 button[type="submit"] {
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 4px;
-  background-color: #5f22d9;
+  border-radius: 8px;
+  background-color: var(--primary-color);
   color: #fff;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #4a1aa6;
+  background-color: var(--accent-color);
 }
 /* --------------------FOOTER---------------------------------------------- */
 #Socials {
@@ -309,10 +351,7 @@ button[type="submit"]:hover {
   align-self: center;
 }
 
-#Socials > a:last-child {
-  white-space: nowrap; /* Ensure phone number stays on one line */
-  width: 100%;
-}
+
 
 footer {
   margin-top: auto;
@@ -321,7 +360,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
@@ -354,15 +393,15 @@ footer {
 
 @media (max-width: 480px) {
   body {
-    font-size: 16px;
+    font-size: var(--font-size-small);
   }
 
   #Banner {
-    font-size: 20px;
+    font-size: var(--font-size-large);
   }
 
   .secHead {
-    font-size: 1.5rem;
+    font-size: var(--font-size-large);
   }
 
   #ProjectsContainer {
