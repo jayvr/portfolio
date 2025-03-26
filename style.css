@@ -1,9 +1,9 @@
 /* Define color palette */
 :root {
-  --primary-color: #ff6f61; /* Orange/Red */
-  --secondary-color: #2c3e50; /* Dark Blue */
-  --accent-color: #8e44ad; /* Playful Purple */
-  --background-color: #ecf0f1; /* Light Gray */
+  --accent-color: #1e3a8a; /* Dark Blue */
+  --secondary-color: #2c3e50; /* Dark Gray */
+  --primary-color: #ff6f61; /* Orange */
+  --background-color: #f2f0e3; /* Muted White */
   --highlight-color: #34495e; /* Dark Gray */
 
   /* Font sizes */
@@ -69,6 +69,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
 header {
@@ -82,6 +83,7 @@ header {
   font-size: var(--font-size-large);
   color: var(--primary-color);
 }
+
 #Navbar {
   display: flex;
   justify-content: space-between;
@@ -91,6 +93,21 @@ header {
 
 #Navbar > li {
   margin: 0 1rem;
+}
+
+#Navbar > li > a {
+  transition: ease-in-out 0.2s;
+  padding: 10px;
+}
+
+#Navbar > li > a:hover {
+  color: var(--accent-color);
+  /* border: 1px solid var(--highlight-color); */
+  background-color: #e5e3d7;
+  color: #ff7f11;
+  padding: 10px;
+  border-radius: 8px;
+  transition: ease-in-out 0.2s;
 }
 
 #Tagline {
@@ -108,10 +125,10 @@ header {
 
 #MyName {
   font-size: var(--font-size-large);
+  transition: ease-in-out 0.5s;
 }
 #MyName:hover {
   color: var(--primary-color);
-  transition: ease-in-out 0.5s;
 }
 
 /* --------------------------- PROJECTS----------------------------- */
@@ -142,8 +159,8 @@ header {
   min-height: 150px;
   padding: 0.5rem;
   border-radius: 8px;
-  background-color: var(--background-color);
-  border: 1px solid var(--highlight-color);
+  /* border: 1px solid var(--highlight-color); */
+  transition: transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,12 +168,11 @@ header {
   text-align: center;
   padding: 0.5rem;
   height: 4rem;
-  color: var(--accent-color);
-  background-color: var(--background-color);
+  /* color: var(--accent-color); */
+  font-weight: bold;
   border-radius: 8px;
   align-self: center;
   font-size: var(--font-size-large);
-  
 }
 
 .projectCard > p {
@@ -168,7 +184,6 @@ header {
   height: 2.5rem;
   transition: transform 0.3s ease;
   font-size: var(--font-size-base);
-  
 }
 
 .projectCard:hover > p {
@@ -176,20 +191,21 @@ header {
   white-space: normal;
   height: auto;
   transform: translateY(-10px);
-  transition: transform 0.3s ease;
-} 
+}
 
 .projectCard:hover {
   border-color: var(--accent-color);
   transform: translateY(-10px);
-  transition: transform 0.3s ease;
+  background-color: #e5e3d7;
   /* transition-timing-function: ease-in-out;
   transition: 0.2s; */
 }
-* ------------------ACHIEVEMENTS------------------------------ */
-#Achievements {
+*
+  ------------------ACHIEVEMENTS------------------------------
+  */
+  #Achievements {
   padding: 2rem;
-  /* background-color: var(--off-white); */
+
   color: var(--secondary-color);
 }
 
@@ -206,8 +222,7 @@ header {
 }
 
 .certificateCard {
-  background-color: var(--background-color);
-  border: 1px solid var(--highlight-color);
+  /* border: 1px solid var(--highlight-color); */
   border-radius: 8px;
   padding: 1rem;
   width: 350px;
@@ -216,12 +231,14 @@ header {
 }
 
 .certificateCard:hover {
+  background-color: #e5e3d7;
   transform: translateY(-10px);
 }
 
 .certificateCard h3 {
   margin-bottom: 0.5rem;
-  color: var(--accent-color);
+  font-weight: bold;
+  /* color: var(--accent-color); */
   font-size: var(--font-size-large);
 }
 
@@ -230,6 +247,13 @@ header {
   color: var(--secondary-color);
   font-size: var(--font-size-base);
 }
+
+/* #SectionWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 2rem 0rem;
+} */
 /* ----------------------ABOUT ME---------------------------- */
 #AboutMe {
   padding: 2rem 0rem;
@@ -242,12 +266,12 @@ header {
   margin-bottom: 1rem;
 }
 
-.meCard {
+#MeCard {
   background-color: var(--background-color);
-  border: 1px solid var(--highlight-color);
+  /* border: 1px solid var(--highlight-color); */
   border-radius: 8px;
   padding: 1rem;
-  width: 99%;
+  width: 80%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin: auto;
@@ -274,7 +298,7 @@ header {
 /* ----------------CONTACT---------------------------------------------- */
 #ContactContainer {
   display: flex;
-  width: 99%;
+  width: 80%;
   margin: auto;
   margin-bottom: 1rem;
   flex-direction: column;
@@ -282,7 +306,7 @@ header {
   padding: 1rem 2rem;
   background-color: var(--background-color);
   border-radius: 8px;
-  border: 1px solid var(--highlight-color);
+  /* border: 1px solid var(--highlight-color); */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -351,8 +375,6 @@ button[type="submit"]:hover {
   align-self: center;
 }
 
-
-
 footer {
   margin-top: auto;
   display: flex;
@@ -369,17 +391,23 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #Banner {
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
   }
 
   #Navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #Navbar > li {
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
   }
 
   #ProjectsContainer {
@@ -389,9 +417,18 @@ footer {
   #Socials > a {
     margin: 0.5rem 0;
   }
+
+  #MeCard,
+  #ContactContainer {
+    width: 95%;
+  }
 }
 
 @media (max-width: 480px) {
+  #Navbar > li {
+    margin: 0.5rem 0.5rem;
+  }
+
   body {
     font-size: var(--font-size-small);
   }
@@ -409,7 +446,8 @@ footer {
     align-items: center;
   }
 
-  /* .project {
-    width: 80%;
-  } */
+  #MeCard,
+  #ContactContainer {
+    width: 95%;
+  }
 }
