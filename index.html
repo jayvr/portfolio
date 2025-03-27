@@ -3,40 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/c611235ef7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c611235ef7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Jay Vanraj</title>
   </head>
   <body>
-    <header>
-      <h1 id="Banner">jayvr</h1>
-      <nav>
-        <ul id="Navbar">
-          <!-- <li><a href="#about">About</a></li> -->
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Contact">Contact</a></li>
-          <li><a href="#">Extras</a></li>
+    <header class="site-header">
+      <h1 class="site-title">Jay Vanraj</h1>
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <li><a href="/extras.html">Extras</a></li>
         </ul>
       </nav>
     </header>
-    <section id="Tagline">
-      <img id="MyPhoto" src="src/cat.webp" />
-      <div id="Intro">
-        Hello Hello! I'm <bold id="MyName">Jay Vanraj</bold>. a passionate cybersecurity graduate who thrives on securing networks, analyzing threats, and making sure digital disasters remain hypothetical. <br/>Welcome to my website—where security is tight, vulnerabilities are minimal, and the only thing getting hacked is curiosity. <br/><br/>
-        <div class="quote">"Think of me as a human firewall—constantly monitoring, always adapting, and definitely not accepting suspicious requests."</div>
+
+    <section id="hero" class="hero">
+      <img class="profile-image" src="src/jay.webp" alt="Profile Picture" />
+      <div class="hero-content">
+        <h2>Hi, I'm Jay Vanraj.</h2>
+        <p>
+          Cybersecurity enthusiast dedicated to safeguarding the digital world. <br/>Welcome to my corner of the web—where threats meet their match.
+        </p>
+        <blockquote class="quote">
+          "Your digital safety, my obsession."
+        </blockquote>
       </div>
     </section>
-    <section id="Projects">
-      <h2 class="secHead">Projects</h2>
-      <div id="ProjectsContainer">
-        <div class="projectCard">
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+        <article class="project-card">
           <h3>
             <a
               href="https://www.youtube.com/watch?v=LtUQvg4HDHo"
@@ -49,16 +57,18 @@
             utilizing various tools to extract pertinent information for
             comprehensive threat analysis and resolution.
           </p>
-        </div>
-        <div class="projectCard">
+        </article>
+
+        <article class="project-card">
           <h3>Windows Server Failover</h3>
           <p>
             Implemented failover for OS clusters using iSCSI disks, ensuring
             uninterrupted operations during system failures for seamless
-            transition between clustered operating systems..
+            transition between clustered operating systems.
           </p>
-        </div>
-        <div class="projectCard">
+        </article>
+
+        <article class="project-card">
           <h3>Merging of Enterprise Networks</h3>
           <p>
             Implemented VPN technologies, Cloud integration and Software Defined
@@ -67,8 +77,9 @@
             across multiple countries and enhance routing efficiency and ensure
             efficient data delivery throughout the expansive network.
           </p>
-        </div>
-        <div class="projectCard">
+        </article>
+
+        <article class="project-card">
           <h3>
             <a href="https://github.com/jayvr/eduteur" target="_blank"
               >EduTeur [GITHUB]</a
@@ -79,83 +90,107 @@
             Standard. Developed an online teaching platform meeting university
             standard with a security-first approach.
           </p>
-        </div>
+        </article>
       </div>
     </section>
-    <section id="Achievements">
-      <h2 class="secHead">Certificates</h2>
-      <div class="certificatesContainer">
-        <div class="certificateCard">
-          <h3>CompTIA Security+ Certification</h3>
+
+    <section id="achievements" class="achievements">
+      <h2 class="section-title">Certificates</h2>
+      <div class="certificates-container">
+      <article class="certificate-card">
+        <img src="src/security-plus-badge.webp" alt="Security+ Badge" class="certificate-badge" />
+        <div>
+          <h3>CompTIA: Security+ Certification</h3>
           <p><strong>ID:</strong> BEP7X5T55NF1QNC7</p>
           <p><strong>Obtained Date:</strong> November 13, 2024</p>
           <p><strong>Expiry Date:</strong> November 13, 2027</p>
         </div>
-        <div class="certificateCard">
-          <h3>(ISC)² Certified in Cybersecurity</h3>
+      </article>
+
+      <article class="certificate-card">
+        <img src="src/isc2-badge.webp" alt="(ISC)² Badge" class="certificate-badge" />
+        <div>
+          <h3>(ISC)²: Certified in Cybersecurity</h3>
           <p><strong>ID:</strong> 1898797</p>
-          <p><strong>Obtained Date:</strong> Feburary 01, 2024</p>
+          <p><strong>Obtained Date:</strong> February 01, 2024</p>
           <p><strong>Expiry Date:</strong> January 31, 2027</p>
         </div>
-        <div class="certificateCard">
-          <h3>Google IT Support Professional Certificate</h3>
+      </article>
+
+      <article class="certificate-card">
+        <img src="src/google-it-support-badge.webp" alt="Google IT Support Badge" class="certificate-badge" />
+        <div>
+          <h3>Google: IT Support Professional Certificate</h3>
           <p><strong>ID:</strong> 5QA5R56W2JC8</p>
           <p><strong>Obtained Date:</strong> July 03, 2020</p>
           <p><strong>Expiry Date:</strong> NONE</p>
         </div>
+      </article>
       </div>
-      <div id="SectionWrapper">
-    <section id="AboutMe">
-      <h2 class="secHead">About Me</h2>
-      <div id="MeCard">
-        Cybersecurity enthusiast by day, digital detective by night—because let’s be honest, the internet never sleeps. Armed with a Bachelor’s in Information & Technology, dual majors in Cybersecurity, and a stack of certifications (CompTIA Security+, (ISC)² Certified in Cybersecurity, and more), I live for securing networks, analyzing threats, and catching vulnerabilities before the bad guys do. <br/> <br/>
-        I speak fluent Python, Java, and C++ (and sarcasm, but that’s just a bonus). My toolkit includes everything from IDS/IPS to Security Onion, and I’m well-versed in industry frameworks like MITRE ATT&CK and NIST CSF. Whether it's incident response, forensics, or keeping digital assets in check, I thrive on solving complex security puzzles.<br/> <br/>
-        Collaboration and mentorship keep me motivated—because what's the fun in cybersecurity if you can’t share the paranoia? Always learning, always adapting, and always two steps ahead of a cyber threat (hopefully).<br/> <br/>
+    </section>
+
+    <section id="about" class="about-me">
+      <h2 class="section-title">About Me!</h2>
+      <article class="bio-card">
+        <p>
+          Cybersecurity enthusiast by day, digital detective by night—because
+          let’s be honest, the internet never sleeps. Armed with a Bachelor’s
+          in Information & Technology, dual majors in Cybersecurity, and a
+          stack of certifications (CompTIA Security+, (ISC)² Certified in
+          Cybersecurity, and more), I live for securing networks, analyzing
+          threats, and catching vulnerabilities before the bad guys do.
+        </p>
+        <p>
+          I speak fluent Python, Java, and C++ (and sarcasm, but that’s just a
+          bonus). My toolkit includes everything from IDS/IPS to Security
+          Onion, and I’m well-versed in industry frameworks like MITRE ATT&CK
+          and NIST CSF. Whether it's incident response, forensics, or keeping
+          digital assets in check, I thrive on solving complex security
+          puzzles.
+        </p>
+        <p>
+          Collaboration and mentorship keep me motivated—because what's the fun
+          in cybersecurity if you can’t share the paranoia? Always learning,
+          always adapting, and always two steps ahead of a cyber threat
+          (hopefully).
+        </p>
         <a href="src/Resume.pdf" target="_blank" class="resume-button"
-        >View My Resume</a>
-      </div>  
-    </section>
-    <section id="Contact">
-      <h2 class="secHead">Contact</h2>
-      <div id="ContactContainer">
-        <form
-          id="contactForm"
-          action="#"
-          method="POST"
+          ><strong>View My Resume!</strong></a
         >
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+      </article>
+    </section>
+    <section id="connect" class="connect">
+      <h2 class="section-title">Connect with Me</h2>
+      <p>
+        Feel free to reach out to me on any of the platforms below or drop me an email. Let's connect!
+      </p>
+      <div class="connect-links">
+        <a href="mailto:jay.vanraj05@gmail.com" target="_blank"
+          ><i class="fa-solid fa-envelope fa-2xl" style="color: #ff6b6b"></i></a
+        >
+        <a href="https://github.com/jayvr" target="_blank"
+          ><i class="fa-brands fa-github fa-lg" style="color: #b197fc"></i></a
+        >
+        <a href="https://www.linkedin.com/in/jay-vanraj" target="_blank"
+          ><i class="fa-brands fa-linkedin fa-lg" style="color: #74c0fc"></i></a
+        >
+        <a href="https://www.instagram.com/_jayvr" target="_blank"
+          ><i class="fa-brands fa-instagram fa-lg" style="color: #ff6b6b"></i></a
+        >
+        <a href="https://bsky.app/profile/jaxvr.bsky.social" target="_blank"
+          ><i class="fa-brands fa-bluesky fa-lg" style="color: #74c0fc"></i></a
+        >
       </div>
     </section>
-  </div>
-    <footer>
-      <div id="Socials">
-        <a href="https://github.com/jayvr" target="_blank"
-          ><i class="fa-brands fa-github fa-lg" style="color: #B197FC;"></i></i></a>
-        <a href="https://www.linkedin.com/in/jay-vanraj" target="_blank"
-          ><i class="fa-brands fa-linkedin fa-lg" style="color: #74C0FC;"></i></i></a>
-      </div>
-      <div id="Copy">
-        &copy; 2025 jayvr.
-      <div>May the force be with you!, hehe😁</div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+      <p>&copy; 2025 jayvr. All rights reserved—because lawyers said so.</p>
+      <p>
+        "May the force be with you! (But if it’s not, at least clear your
+        browser cache.)"
+      </p>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
