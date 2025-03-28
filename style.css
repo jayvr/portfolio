@@ -7,7 +7,7 @@
 
   /* Font sizes */
   --font-size-base: 1rem;
-  --font-size-small: 0.875rem;
+  --font-size-med: 1.11rem;
   --font-size-large: 1.25rem;
   --font-size-xlarge: 1.5rem;
   --font-size-xxlarge: 2rem;
@@ -20,7 +20,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+::selection {
+  background-color: var(
+    --primary-color
+  ); /* Change to your desired background color */
+  color: var(--background-color); /* Change to your desired text color */
+}
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -36,6 +41,7 @@ body {
 /* Header */
 .site-header {
   display: flex;
+  font-family: "Lora", serif;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -67,7 +73,6 @@ body {
 
 .site-nav .nav-list a:hover {
   color: var(--primary-color);
-  transition: ease-in-out 0.2s;
 }
 
 /* Hero Section */
@@ -87,7 +92,7 @@ body {
   border-radius: 50%;
   border: 5px solid var(--accent-color);
   object-fit: cover;
-  transition: ease-in-out 0.2s;
+  transition: border 0.3s ease;
 }
 
 .hero .profile-image:hover {
@@ -95,10 +100,12 @@ body {
 }
 
 .hero .hero-content h2 {
+  font-family: "Lora", serif;
   font-size: var(--font-size-xxlarge);
   color: var(--text-color);
   margin-bottom: 1rem;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
 .hero .hero-content h2:hover {
@@ -113,11 +120,12 @@ body {
 
 .hero .quote {
   font-style: italic;
+  font-family: "Merriweather", serif;
   color: var(--accent-color);
   margin-top: 1.5rem;
   text-align: center;
-  /* border-left: 4px solid var(--primary-color);
-  padding-left: 1rem; */
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
 }
 
 /* Projects Section */
@@ -126,6 +134,7 @@ body {
 }
 
 .section-title {
+  font-family: "Lora", serif;
   font-size: var(--font-size-xxlarge);
   color: var(--primary-color);
   text-align: center;
@@ -203,7 +212,7 @@ body {
 
 .certificate-card p {
   font-size: var(--font-size-base);
-  color: var(--text-color); /* Use text color */
+  color: var(--text-color);
   margin: 0.25rem 0;
 }
 
@@ -220,9 +229,19 @@ body {
 }
 
 .bio-card p {
-  font-size: var(--font-size-large);
-  color: var(--text-color); /* Use text color */
+  font-size: var(--font-size-med);
+  color: var(--text-color);
   margin-bottom: 1rem;
+}
+
+.bio-card .quote {
+  font-style: italic;
+  font-family: "Merriweather", serif;
+  font-size: var(--font-size-base);
+  color: var(--accent-color);
+  margin-top: 1.5rem;
+  text-align: center;
+  padding-left: 1rem;
 }
 
 .resume-button {
@@ -297,6 +316,7 @@ body {
 
 /* Footer */
 .site-footer {
+  font-family: "Merriweather", serif;
   text-align: center;
   padding: 2rem;
   color: var(--text-color);
